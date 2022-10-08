@@ -1,5 +1,7 @@
 // Create a function to change
 // the hash value of the page
+$("switch-lang-it").hide();
+
 function switchLanguage(lang) {
     location.hash = lang;
     location.reload();
@@ -61,6 +63,8 @@ function switchLanguage(lang) {
     // Set the content of the webpage 
     // depending on the hash value
     if (window.location.hash == "#it") {
+        $("#switch-lang-it").hide();
+
         lang_hi.innerHTML = language.it.hi;
         lang_wewantyou.innerHTML = language.it.wewantyou;
         lang_findoutmore.innerHTML = language.it.findoutmore;
@@ -81,6 +85,8 @@ function switchLanguage(lang) {
         lang_businessmodel_context.innerHTML = language.it.businessmodel_context;
     }
     else if (window.location.hash == "#en") {
+        $("#switch-lang-en").hide();
+
         lang_hi.innerHTML = language.en.hi;
         lang_wewantyou.innerHTML = language.en.wewantyou;
         lang_findoutmore.innerHTML = language.en.findoutmore;
@@ -100,4 +106,6 @@ function switchLanguage(lang) {
         lang_businessmodel.innerHTML = language.en.businessmodel;
         lang_businessmodel_context.innerHTML = language.en.businessmodel_context;
     }
+    } else {
+        $("#switch-lang-it").hide();
     }
