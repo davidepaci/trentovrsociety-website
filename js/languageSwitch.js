@@ -74,6 +74,9 @@ function switchLanguage(lang) {
         lang_whoarewe.innerHTML = language.it.whoarewe;
         lang_whoarewe_context.innerHTML = language.it.whoarewe_context;
 
+        lang_whatkindofevents.innerHTML = language.it.whatkindofevents;
+        lang_whatkindofevents_context.innerHTML = language.it.whatkindofevents_context;
+
         lang_dalle_example.innerHTML = language.it.dalle_example;
 
         lang_whatkindofexperiences.innerHTML = language.it.whatkindofexperiences;
@@ -96,6 +99,9 @@ function switchLanguage(lang) {
 
         lang_whoarewe.innerHTML = language.en.whoarewe;
         lang_whoarewe_context.innerHTML = language.en.whoarewe_context;
+
+        lang_whatkindofevents.innerHTML = language.en.whatkindofevents;
+        lang_whatkindofevents_context.innerHTML = language.en.whatkindofevents_context;
 
         lang_dalle_example.innerHTML = language.en.dalle_example;
 
