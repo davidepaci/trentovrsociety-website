@@ -31,7 +31,7 @@ function switchLanguage(lang) {
         socialmedias: "Tutti i nostri social",
 
         businessmodel: "Ma come guadagnate?",
-        businessmodel_context: "<b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e falla divertire allo stesso tempo!<br><br>Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia."
+        businessmodel_context: "<b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e farla divertire allo stesso tempo!<br><br>Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia."
     },
     en: {
         hi: "Hi!",
