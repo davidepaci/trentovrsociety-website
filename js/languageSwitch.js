@@ -91,7 +91,7 @@ function switchLanguage(lang) {
 
         lang_interested.innerHTML = language.it.interested;
         lang_calltoaction.innerHTML = language.it.calltoaction;
-        lang_socialmedias.innerHTML = language.it.socialmedias;
+        //lang_socialmedias.innerHTML = language.it.socialmedias;
 
         lang_businessmodel.innerHTML = language.it.businessmodel;
         lang_businessmodel_context.innerHTML = language.it.businessmodel_context;
@@ -120,7 +120,7 @@ function switchLanguage(lang) {
 
         lang_interested.innerHTML = language.en.interested;
         lang_calltoaction.innerHTML = language.en.calltoaction;
-        lang_socialmedias.innerHTML = language.en.socialmedias;
+        //lang_socialmedias.innerHTML = language.en.socialmedias;
 
         lang_businessmodel.innerHTML = language.en.businessmodel;
         lang_businessmodel_context.innerHTML = language.en.businessmodel_context;
