@@ -61,7 +61,7 @@ function switchLanguage(lang) {
         businessmodel_context: "<b>We don't!</b> We only want <b>people to know about Virtual Reality's potential</b> to be <b>the entertainment of the future</b>, and make them have fun at the same time!<br><br>All we have is a donation box: every donation will go towards the headset's maintenance and Save the Children Italia.",
 
         collaboration: "Collaboration",
-        collaboration_context: "Looking to join the project or collaborate with us? Contact us at <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>"
+        collaboration_context: "Looking to join the project or collaborate with us? Contact us at <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!"
     },
     };
 
