@@ -31,7 +31,10 @@ function switchLanguage(lang) {
         socialmedias: "Tutti i nostri social",
 
         businessmodel: "Ma come guadagnate?",
-        businessmodel_context: "<b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e farla divertire allo stesso tempo!<br><br>Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia."
+        businessmodel_context: "<b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e farla divertire allo stesso tempo!<br><br>Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia.",
+    
+        collaboration: "Collaborazioni",
+        collaboration_context: "Vuoi partecipare al progetto o collaborare con noi? Scrivici un'email a <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!"
     },
     en: {
         hi: "Hi!",
@@ -55,7 +58,10 @@ function switchLanguage(lang) {
         socialmedias: "Our social medias",
 
         businessmodel: "So how do you exactly make money?",
-        businessmodel_context: "<b>We don't!</b> We only want <b>people to know about Virtual Reality's potential</b> to be <b>the entertainment of the future</b>, and make them have fun at the same time!<br><br>All we have is a donation box: every donation will go towards the headset's maintenance and Save the Children Italia."
+        businessmodel_context: "<b>We don't!</b> We only want <b>people to know about Virtual Reality's potential</b> to be <b>the entertainment of the future</b>, and make them have fun at the same time!<br><br>All we have is a donation box: every donation will go towards the headset's maintenance and Save the Children Italia.",
+
+        collaboration: "Collaboration",
+        collaboration_context: "Looking to join the project or collaborate with us? Contact us at <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>"
     },
     };
 
@@ -89,6 +95,9 @@ function switchLanguage(lang) {
 
         lang_businessmodel.innerHTML = language.it.businessmodel;
         lang_businessmodel_context.innerHTML = language.it.businessmodel_context;
+
+        lang_collaboration.innerHTML = language.it.collaboration;
+        lang_collaboration_context.innerHTML = language.it.collaboration_context;
     }
     else if (window.location.hash == "#en") {
         $("#switch-lang-en").hide();
@@ -115,6 +124,9 @@ function switchLanguage(lang) {
 
         lang_businessmodel.innerHTML = language.en.businessmodel;
         lang_businessmodel_context.innerHTML = language.en.businessmodel_context;
+
+        lang_collaboration.innerHTML = language.en.collaboration;
+        lang_collaboration_context.innerHTML = language.en.collaboration_context;
     }
     } else {
         $("#switch-lang-it").hide();
