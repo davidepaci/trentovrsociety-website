@@ -2,7 +2,6 @@ name: Image Optimizer
 on: push
 jobs:
   build:
-    name: calibreapp/image-actions
     runs-on: ubuntu-latest
     steps:
       - name: Image Optimizer
