@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "compress-images": "^2.0.5",
+    "gifsicle": "^5.2.1",
+    "pngquant-bin": "^6.0.1"
+  }
+}
