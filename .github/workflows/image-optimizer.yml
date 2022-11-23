@@ -15,5 +15,5 @@ jobs:
       - name: Crush images
         uses: crush-pics/crush-pics-github-action@master
         with:
-          repo-token: ${{ secrets.IMAGE_OPTIMIZER }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           api-key: ${{ secrets.CRUSH_API_KEY }}
