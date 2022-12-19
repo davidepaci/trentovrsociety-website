@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- Primary Meta Tags -->
-        <title>Trento Virtual Reality Society — Play Virtual Reality for Free</title>
+        <title>Trento Virtual Reality Society — Eleven Table Tennis Tournament 2022</title>
         <meta name="title" content="Trento Virtual Reality Society — Play Virtual Reality for Free">
         <meta name="description" content="Un'associazione no-profit che organizza eventi a Trento dove puoi giocare alla Realtà Virtuale in maniera completamente gratuita!">
 
@@ -22,7 +22,7 @@
         <meta property="twitter:description" content="Un'associazione no-profit che organizza eventi a Trento dove puoi giocare alla Realtà Virtuale in maniera completamente gratuita!">
         <meta property="twitter:image" content="https://trentovrsociety.it/assets/img/meta_image.png">
 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FESQSVJ700"></script>
         <script>
@@ -40,7 +40,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap) DOPPIO BOOTSTRAP PERCHE' YOLO -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
         <!-- Switch language -->
         <script
         src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
@@ -53,7 +53,7 @@
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container px-5">
-                    <img style="height: 15rem;" src="assets/img/logo_cropped.png" />
+                    <img style="height: 15rem;" src="../assets/img/logo_cropped.png" />
                     <h1 id="lang_hi" class="masthead-heading mb-0">
                         Ciao!
                     </h1>
@@ -79,14 +79,12 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.png" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="../assets/img/01.png" alt="..." /></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-4">
                             <h2 class="display-4" id="lang_whoarewe">Cosa siamo?</h2>
-                            <b id="lang_whoarewe_context">Siamo un'<b>associazione no-profit</b> che organizza eventi a <b>Trento</b> in cui si gioca ai nostri visori per la Realtà Virtuale, il tutto <b>completamente gratuito</b>.
-                            <br/><br/>
-                            Vogliamo essere un punto di ritrovo per <b>i fanatici della Realtà Virtuale</b> e invogliare le persone a provare e conoscere il mezzo d'intrattenimento del futuro tramite i nostri eventi.</p>
+                            <p id="lang_whoarewe_context">Siamo un'<b>associazione no-profit</b> che organizza eventi a <b>Trento</b> in cui si gioca ai nostri visori per la Realtà Virtuale, il tutto <b>completamente gratuito</b>.</p>
                         </div>
                     </div>
                 </div>
@@ -97,7 +95,7 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.png" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="../assets/img/02.png" alt="..." /></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="p-4">
@@ -111,23 +109,14 @@
                 </div>
             </div>
         </section>
-        <!--<section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <img style="height: 30rem; max-width: auto" class="img-fluid" src="assets/img/event_dalle.png" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p id="lang_dalle_example">Un esempio di come sono i nostri eventi. Immagine generata da DALL-E 2, un'intelligenza artificiale, con la seguente frase: <i>"A group of people in a bar staring at one person wearing a VR headset, painting style"</i></p>
-                    </div>
-                </div>
-            </div>
-        </section>-->
         <section>
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-12">
-                        
+                    <div class="col-lg-6">
+                        <img style="height: 30rem; max-width: auto" class="img-fluid" src="../assets/img/event_dalle.png" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p id="lang_dalle_example">Un esempio di come sono i nostri eventi. Immagine generata da DALL-E 2, un'intelligenza artificiale, con la seguente frase: <i>"A group of people in a bar staring at one person wearing a VR headset, painting style"</i></p>
                     </div>
                 </div>
             </div>
@@ -139,7 +128,7 @@
                     <div class="col-lg-6 order-lg-2 px-0 px-sm-4">
                         <!--<div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>-->
                         <video id="vid" width="100%" height="360" autoplay muted loop>
-                            <source src="assets/vid/gameplay_showcase.mp4" type="video/mp4">
+                            <source src="../assets/vid/gameplay_showcase.mp4" type="video/mp4">
                           Your browser does not support the video tag.
                           </video>
                     </div>
@@ -155,7 +144,6 @@
                                 <li>Space Pirate Trainer DX</li>
                                 <li>Keep Talking and Nobody Explodes</li>
                                 <li>Five Nights at Freddy's VR</li>
-                                <li>Face Your Fears</li>
                             </ul>
                             <p id="lang_whatkindofexperiences_context_two">Teniamo questa lista sempre aggiornata e annunceremo ogni aggiunta su tutti i nostri social.
                                 <br><br>Se non sai cosa giocare, non ti preoccupare! Ti consigliamo noi 😊
@@ -191,22 +179,41 @@
         <section>
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-4"><img class="img-fluid rounded-circle" src="../assets/img/03.png" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-4">
+                            <h2 class="display-4" id="lang_businessmodel">Ma come guadagnate?</h2>
+                            <p id="lang_businessmodel_context"><b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e farla divertire allo stesso tempo!
+                                <br><br>
+                                Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/04.png" alt="..." /></div>
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="../assets/img/04.png" alt="..." /></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="p-4">
                             <h2 class="display-4" id="lang_collaboration">Collaborazioni</h2>
                             <p id="lang_collaboration_context">Vuoi partecipare al progetto o collaborare con noi? Scrivici un'email a <b><a href="mailto:hey@trentovrsociety.it">hey@trentovrsociety.it</a></b>!</p>
-                            <p id="lang_collaboration_whowelookfor">Siamo sempre alla ricerca di volontari che vogliano prestare i loro visori agli eventi e di locali che ci ospitino, nonché progetti che riguardano la Realtà Virtuale!</p>
-                            <p id="lang_collaboration_collaborations">Finora abbiamo collaborato con:
-                                <ul>
-                                    <li>For Fun Labs Inc, sviluppatori di Eleven Table Tennis, come nostri sponsor del torneo del 2023</li>
-                                    <li>DISI dell'Università di Trento</li>
-                                    <li>Global Game Jame Trento</li>
-                                    <li>FabLab dell'Università di Trento</li>
-                                </ul>
-                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="d-none d-md-inline">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-12">
+                        <div class="alert alert-primary" role="alert">
+                            <p>Psst... Stai visualizzando questa pagina da un computer? Fai il Konami Code velocemente per qualcosa di speciale ✨</p>
                         </div>
                     </div>
                 </div>
@@ -215,15 +222,13 @@
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Trento Virtual Reality Society 2022</p>
-                <p id="lang_footer_kazoo" class="m-0 text-center text-white small">Un'attività di <a href="https://www.arcideltrentino.it/circoli/kazoo/">Kazoo APS</a></p>
-                <br/>
             <h6 class="text-center"><a href="mailto:hey@trentovrsociety.it">hey@trentovrsociety.it</a></h6></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
         <!-- Language Switch -->
-        <script src="js/languageSwitch.js"></script>
+        <script src="../js/languageSwitch.js"></script>
     </body>
 </html>
