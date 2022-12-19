@@ -34,7 +34,11 @@ function switchLanguage(lang) {
         businessmodel_context: "<b>Non vogliamo guadagnare!</b> Il nostro scopo è puramente quello di <b>far conoscere alla gente la potenzialità della Realtà Virtuale</b> come il <b>mezzo di intrattenimento del futuro</b>, e farla divertire allo stesso tempo!<br><br>Abbiamo solo un box donazioni: tutte le offerte vanno alla manutenzione del visore e Save the Children Italia.",
     
         collaboration: "Collaborazioni",
-        collaboration_context: "Vuoi partecipare al progetto o collaborare con noi? Scrivici un'email a <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!"
+        collaboration_context: "Vuoi partecipare al progetto o collaborare con noi? Scrivici un'email a <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!",
+        collaboration_whowelookfor: "Siamo sempre alla ricerca di volontari che vogliano prestare i loro visori agli eventi e di locali che ci ospitino, nonché progetti che riguardano la Realtà Virtuale!",
+        collaboration_collaborations: "Finora abbiamo collaborato con: <ul><li>For Fun Labs Inc, sviluppatori di Eleven Table Tennis, come nostri sponsor del torneo del 2023</li><li>DISI dell'Università di Trento</li><li>Global Game Jame Trento</li><li>FabLab dell'Università di Trento</li></ul>",
+        
+        footer_kazoo: "Un'attività di <a href='https://www.arcideltrentino.it/circoli/kazoo/'>Kazoo APS</a>"
     },
     en: {
         hi: "Hi!",
@@ -61,7 +65,11 @@ function switchLanguage(lang) {
         businessmodel_context: "<b>We don't!</b> We only want <b>people to know about Virtual Reality's potential</b> to be <b>the entertainment of the future</b>, and make them have fun at the same time!<br><br>All we have is a donation box: every donation will go towards the headset's maintenance and Save the Children Italia.",
 
         collaboration: "Collaboration",
-        collaboration_context: "Looking to join the project or collaborate with us? Contact us at <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!"
+        collaboration_context: "Looking to join the project or collaborate with us? Contact us at <b><a href=\"mailto:hey@trentovrsociety.it\">hey@trentovrsociety.it</a></b>!",
+        collaboration_whowelookfor: "We're always looking for volunteers who want to lend their headsets during our events and places that can host us, as well as any project that is VR-related!",
+        collaboration_collaborations: "So far we collaborated with: <ul><li>For Fun Labs Inc, developers of Eleven Table Tennis, as sponsors of our 2023 tournament</li><li>DISI of University of Trento</li><li>Global Game Jame Trento</li><li>FabLab of University of Trento</li></ul>",
+        
+        footer_kazoo: "An activity of <a href='https://www.arcideltrentino.it/circoli/kazoo/'>Kazoo APS</a>"
     },
     };
 
@@ -98,6 +106,10 @@ function switchLanguage(lang) {
 
         lang_collaboration.innerHTML = language.it.collaboration;
         lang_collaboration_context.innerHTML = language.it.collaboration_context;
+        lang_collaboration_whowelookfor.innerHTML = language.it.collaboration_whowelookfor;
+        lang_collaboration_collaborations.innerHTML = language.it.collaboration_collaborations;
+
+        lang_footer_kazoo.innerHTML = language.it.footer_kazoo;
     }
     else if (window.location.hash == "#en") {
         $("#switch-lang-en").hide();
@@ -127,6 +139,10 @@ function switchLanguage(lang) {
 
         lang_collaboration.innerHTML = language.en.collaboration;
         lang_collaboration_context.innerHTML = language.en.collaboration_context;
+        lang_collaboration_whowelookfor.innerHTML = language.en.collaboration_whowelookfor;
+        lang_collaboration_collaborations.innerHTML = language.en.collaboration_collaborations;
+
+        lang_footer_kazoo.innerHTML = language.en.footer_kazoo;
     }
     } else {
         $("#switch-lang-it").hide();
