@@ -1,1 +1,4 @@
-@import url(vendors/template.css);
+@import url(vendors/bootstrap.css);
+@import url(base/base.css);
+@import url(base/typography.css);
+@import url(base/utilities.css);
