@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Avenir;
+    src: url('/assets/fonts/AvenirLTStd-Black.otf');
+}
+
+.font-avenir {
+    font-family: Avenir !important;
+}
