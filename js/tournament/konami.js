@@ -1,186 +1,116 @@
-// quick and dirty as javascript should be ;) [darokin]
-// == I let the nice comment above from 2010
+/******************************************************************************
+* This script detects the Konami code 
+* (Full Konami Code obtained from: http://en.wikipedia.org/wiki/Konami_Code)
+* If the Konami code is detected the function called "startUpKonami" is invoked.
+* You can do whatever you want on "startUpKonami". Right now this method just:
+*	- Detachs the Konami code detection (so no further detections can happen).
+*	- Invokes an external function.
+*
+* Note: In case the user presses keys like "shift", "caps lock", "Ctrl"...
+*		the code will have to be reentered from scratch 
+*		as after detecting such keys the detected Konami code is cleaned, 
+*		so a new Konami code detection starts again.
+*
+* Note2: The Konami Code sequence is the following (has to be entered in that order):
+*		up,up,down,down,left,right,left,right,B,A
+*
+* Note3: The Konami Code detection doesn't care about upper case letters, so it's the same
+*		to enter "up,up,down,down,left,right,left,right,b,a" or
+*		to enter "up,up,down,down,left,right,left,right,B,A"
+*
+* Licence: WTFPL (http://es.wikipedia.org/wiki/WTFPL)
+*
+*
+* Developed by @nestoralvaro
+*
+*******************************************************************************/
+(function() {
+    "use strict";
+    // Some key codes that are used
+    var up = 38,
+	    down = 40,
+	    left = 37,
+	    right = 39,
+	    A = 65,
+	    B = 66;
+    // Full Konami Code obtained from: http://en.wikipedia.org/wiki/Konami_Code
+    var	konamiCode = [up,up,down,down,left,right,left,right,B,A];
+    // Deteted sequence. Empty by default
+    var konamiDetected = [];
 
-// KONAMI CODE (vars)
-// up down left rigth a b
-// 38 40 37 39 65 66
-const konamiCodeKeyChain = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-const konamiPicsSize = "48x45"
-const konamiPics = [
-	"kc_up_" + konamiPicsSize + ".png",
-	"kc_up_" + konamiPicsSize + ".png",
-	"kc_down_" + konamiPicsSize + ".png",
-	"kc_down_" + konamiPicsSize + ".png",
-	"kc_left_" + konamiPicsSize + ".png",
-	"kc_right_" + konamiPicsSize + ".png",
-	"kc_left_" + konamiPicsSize + ".png",
-	"kc_right_" + konamiPicsSize + ".png",
-	"kc_b_" + konamiPicsSize + ".png",
-	"kc_a_" + konamiPicsSize + ".png"
-]
-const konamiText = [
-	"UP", "UP",
-	"DOWN", "DOWN",
-	"LEFT", "RIGHT",
-	"LEFT", "RIGHT",
-	"B", "A"
-]
+    // Attachs the function on an element (for a certain event)
+    function attachCustomEvent(el, eventName, desiredFunction) {
+	    if (el.addEventListener) {
+		    el.addEventListener(eventName,desiredFunction,false);
+	    // Old IE
+	    } else {
+		    el.attachEvent('on' + eventName,desiredFunction);
+	    }
+    }
 
-const iconError = "<i class=\"fas fa-times\"></i>";
-const iconOk = "<i class=\"fas fa-check-circle\"></i>";
-const iconSuccess = "<i class=\"fas fa-heart\"></i>";
+    // Detachs the function on an element (for a certain event)
+    function detachCustomEvent(el, eventName, desiredFunction) {
+	    if (el.removeEventListener) {
+		    el.removeEventListener(eventName,desiredFunction,false);
+	    // Old IE
+	    } else {
+		    el.detachEvent('on' + eventName,desiredFunction);
+	    }
+    }
 
-// Max time in ms between 2 keystrokes
-const difficulties = [
-	{"text": "Easy", 
-	"speed": 777},
-	{"text": "Normal", 
-	"speed": 420},
-	{"text": "Hard", 
-	"speed": 300},
-	{"text": "Hard++", 
-	"speed": 180}
-]
-var konamiDifficulty;
+    // Function that is invoked after detecting the Konami Code
+    function startUpKonami() {
+	    // Prevent further detection (When removing this line the Konami code can be entered multiple times)
+	    detachCustomEvent(document,"keydown",isKonamiKey);
+	    konamiIsDetected();
+    }
 
-var keyChain = new Array();
-var keyLastTime = 0;
-var keyGood = 0;
+    // Function to detect whether the pressed key is part of the Konami Code
+    function isKonamiKey(e) {
+	    var evt = e || window.event;
+        var key = evt.keyCode ? evt.keyCode : evt.which;
+	    // Set to true before checking everything    
+	    var codeOk = true;
+        // Push the key
+        konamiDetected.push(key);
+        // Check if the key is valid or not
+        if (konamiDetected.length < konamiCode.length) {
+		    // Check that the values are Ok so far. If not clear the array
+		    for (var i = 0, max = konamiDetected.length; i < max ; i++) {
+        		if(konamiDetected[i] !== konamiCode[i]) {
+	        		codeOk = false;
+        		}
+        	}
+        	if (!codeOk) {
+        		// Clean the array
+        		konamiDetected = [];
+        		// Push the just detected value inside the array
+        		konamiDetected.push(key);
+        	}
+        } else if (konamiDetected.length === konamiCode.length) {
+        	for (var j = 0, max = konamiDetected.length; j < max ; j++) {
+        		if(konamiDetected[j] !== konamiCode[j]) {
+	        		codeOk = false;
+        		}
+        	}
+        	// Clean the array
+        	konamiDetected = [];
+        	if (codeOk) {
+	        	startUpKonami();
+        	}
+        // This should never happen, but if it happens we clean the array
+        } else {
+	        konamiDetected = [];
+        }
+        // After everything has been checked show the resulting array after pressing such key
+	    // console.log(konamiDetected);
+    }
 
-var bWait = false;
+    // Attach the event detection to the whole document
+    attachCustomEvent(document,"keydown",isKonamiKey);
+})();
 
-/* ********************************** KONAMI CODE ************************** */
-function konamiCheck(_keyCode) {
-	if (bWait) {
-		return;
-	}
-
-	let _nowDate = new Date(); 
-	let _now = _nowDate.getTime();
-	let _diffTime = _now - keyLastTime;
-	let _bFailTime = false;
-	let _bFailKey = false;
-	let _bSuccess = false;
-
-	// == Test if TOO SLOW
-	_bFailTime = ((keyLastTime != 0) && (_diffTime > konamiDifficulty)) 
-
-	// == Test if KEY CORRECT
-	_bFailKey = (_keyCode != konamiCodeKeyChain[keyGood]) 
-
-	if (_bFailTime || _bFailKey) {
-		if (_bFailTime) {
-			$("#logspan").html(iconError + " Too slow on key n°" + (keyGood + 1) + " [" + konamiText[keyGood] + "] you took " + _diffTime + "ms.");
-			if (_bFailKey) {
-				$("#logspan").append(" You were typing the wrong key anyway ;)")
-			}
-		} else {
-			$("#logspan").html(iconError + " Fail on key n°" + (keyGood + 1) + " [" + konamiText[keyGood] + "].");
-		}
-	}
-
-	// == Update visuals
-	updateKeyVisuals(keyGood, (_bFailTime || _bFailKey))
-
-	// == Test if Konami code fully done
-	_bSuccess = (!_bFailTime && !_bFailKey && keyGood == konamiCodeKeyChain.length - 1)
-
-	// == Exit and reinit if fail or full success
-	if (_bFailTime || _bFailKey || _bSuccess) {
-		startWait(keyGood, _bSuccess)
-		keyGood = 0;
-		keyLastTime = 0;
-		return _bSuccess;
-	}
-
-	// == Key and Time OK, continue counting
-	$("#logspan").html(iconOk + " Key n°" + (keyGood + 1) + " [" + konamiText[keyGood] + "] validated.");
-	$("#key" + keyGood).css("opacity", 1);
-	keyGood++;
-	keyLastTime = _now;
-	return false;
+// Function that is invoked after the konami code has been entered
+function konamiIsDetected() {
+	alert("Quando sarai al torneo, dì a Davide “Restiamo umani! No al metaverso.” Se sei il primo a dirlo riceverai una medaglia!");
 }
-/* **********************************       ************************** */
-
-function updateKeyVisuals(_indKey, _bFail) {
-	if (_bFail) {
-		$("#key" + _indKey).addClass("red");	
-	}
-	$("#key" + _indKey).css("opacity", 1);
-}
-
-function resetLog() {
-	$("#logspan").html("Start typing when you are ready");
-}
-
-function resetKeysVisuals(_indKey, _bSuccess) {
-	for (i = 0; i < konamiPics.length; i++) {
-		$("#key" + i).css("opacity", .2);
-		if (_bSuccess) {
-			$("#key" + i).removeClass("green");
-		}
-	}
-	if (!_bSuccess) {
-		$("#key" + _indKey).removeClass("red");
-	}
-}
-
-function checkKeyR(e) {
-	if (konamiCheck(e.keyCode)) {
-		alert("WELL DONE!");
-	}
-}
-
-function setDifficulty(_speed) {
-	konamiDifficulty = _speed;
-	keyGood = 0;
-	keyLastTime = 0;
-	resetKeysVisuals(0, false);
-	resetLog()
-}
-
-function testSleep() {
-	if (bWait) {
-		return;
-	}
-	let _nowDate = new Date(); 
-	let _now = _nowDate.getTime();
-	let _diffTime = _now - keyLastTime;
-
-	// == The user is typing but took 2 times the delay and no input
-	if ((keyLastTime != 0) && (_diffTime > (konamiDifficulty * 2))) {
-		updateKeyVisuals(keyGood, true);
-		console.log("Are you sleeping?");
-		startWait(keyGood, false);
-		keyGood = 0;
-		keyLastTime = 0;
-	}
-}
-
-function startWait(_indKey, _bSuccess) {
-	bWait = true;
-	setTimeout(function() { bWait = false; resetKeysVisuals(_indKey, _bSuccess); resetLog(); }, (_bSuccess ? 4000 : 2000));
-}
-
-/* ********************************** READY ************************** */
-
-$(document).ready(function() {
-	// == Key listening
-	$(document).keyup(checkKeyR);
-
-	// Handle button selection
-	$.each($('.buttonunselected'), function (key, value) {
-		$(this).click(function (e) {
-		  $('.buttonselected').removeClass('buttonselected').addClass('buttonunselected');
-		  $(this).removeClass('buttonunselected').addClass('buttonselected');
-		});
-	});
-	// == Set difficulty to normal by default
-	konamiDifficulty = difficulties[1].speed
-
-	// == Init log
-	resetLog();
-
-	// == Test user input delay too long
-	setInterval(function() { testSleep(); }, 500);
-});

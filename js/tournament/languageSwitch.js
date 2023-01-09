@@ -27,6 +27,7 @@ function switchLanguage(lang) {
         sixth_paragraph: "<b>L’iscrizione al torneo è completamente gratuita.</b>",
         date_paragraph: "<b>📅 Data:</b> giovedì 23 febbraio 2023 dalle 15:00",
         location_paragraph: "<b>🗺 Location:</b> Aula A101 in Polo Ferrari - Povo 1 (Via Sommarive 9, 38123 TN)",
+        konami: "<i>P.S. Vediamo che sei da computer… Fai il Konami code!</i>",
         interested: "Interessatǝ?",
         calltoaction_button: "Registrati al torneo",
         calltoaction_contact: "Hai dubbi e vuoi ulteriori informazioni? Contattaci su tutti i nostri social e seguici per gli ultimi aggiornamenti sul torneo!",
@@ -49,6 +50,7 @@ function switchLanguage(lang) {
         sixth_paragraph: "<b>Registration for the tournament is completely free.</b>",
         date_paragraph: "<b>📅 Date:</b> Thursday 23 February 2023 from 3:00 PM",
         location_paragraph: "<b>🗺 Location:</b> Classroom A101 in Polo Ferrari - Povo 1 (Via Sommarive 9, 38123 TN)",
+        konami: "<i>P.S. We see you're on a computer… Try doing the Konami code!</i>",
         interested: "Interested?",
         calltoaction_button: "Register for the tournament",
         calltoaction_contact: "Want more info? Contact us on all our social media and follow us for the latest updates on the tournament!",
@@ -80,6 +82,7 @@ function switchLanguage(lang) {
         lang_sixth_paragraph.innerHTML = language.it.sixth_paragraph;
         lang_date_paragraph.innerHTML = language.it.date_paragraph;
         lang_location_paragraph.innerHTML = language.it.location_paragraph;
+        lang_konami.innerHTML = language.it.konami;
         lang_interested.innerHTML = language.it.interested;
         lang_calltoaction_button.innerHTML = language.it.calltoaction_button;
         lang_calltoaction_contact.innerHTML = language.it.calltoaction_contact;
@@ -105,6 +108,7 @@ function switchLanguage(lang) {
         lang_sixth_paragraph.innerHTML = language.en.sixth_paragraph;
         lang_date_paragraph.innerHTML = language.en.date_paragraph;
         lang_location_paragraph.innerHTML = language.en.location_paragraph;
+        lang_konami.innerHTML = language.en.konami;
         lang_interested.innerHTML = language.en.interested;
         lang_calltoaction_button.innerHTML = language.en.calltoaction_button;
         lang_calltoaction_contact.innerHTML = language.en.calltoaction_contact;
