@@ -60,14 +60,16 @@
             <div class="container">
                 <center>
                     <img src="../assets/img/logo_cropped.png" alt="Logo" class="logo">
-                    <h1 class="font-avenir">Torneo di Ping Pong in VR a Trento</h1>
-                    <h2 class="font-avenir">23 febbraio 2023 in Aula A101 (Povo 1 - Università di Trento) dalle 15:00</h2>
+                    <h1 class="font-avenir" id="lang_title">Torneo di Ping Pong in VR a Trento</h1>
+                    <h2 class="font-avenir" id="lang_subtitle">23 febbraio 2023 in Aula A101 (Povo 1 - Università di Trento) dalle 15:00</h2>
                     <br/>
                     <div id="flipdown" class="flipdown"></div>
                     <br/>
-                    <a href="https://forms.gle/2mcb9tRhipRRKn597" target = "_blank" class="btn btn-block btn-lg btn-warning">Registrati subito</a>
-                    <a href="https://twitch.tv/trentovrsociety" target = "_blank" class="twitch btn btn-block btn-lg btn-warning">Guardaci su Twitch</a>
-                    <a href="#info" class="findoutmore btn btn-block btn-lg btn-warning">Scopri di più</a>
+                    <a href="https://forms.gle/2mcb9tRhipRRKn597" target = "_blank" class="btn btn-block btn-lg btn-warning" id="lang_first_button">Registrati subito</a>
+                    <a href="https://twitch.tv/trentovrsociety" target = "_blank" class="twitch btn btn-block btn-lg btn-warning" id="lang_second_button">Guardaci su Twitch</a>
+                    <button onclick="switchLanguage('en')" id="switch-lang-en" class="btn btn-block btn-lg btn-primary">Switch to English</button>
+                    <button onclick="switchLanguage('it')" id="switch-lang-it" class="btn btn-block btn-lg btn-primary">Cambia in lingua italiana</button>
+                    <a href="#info" class="findoutmore btn btn-block btn-lg btn-warning" id="lang_third_button">Scopri di più</a>
                     <br/>
                     <br/>
                 </center>
@@ -85,39 +87,36 @@
                       </video>
                 </div>
                 <div class="col-sm-12 col-md-6 p-5">
-                    <h4>Ciao!</h4>
-                    <p>Siamo la Trento Virtual Reality Society e quest’anno stiamo organizzando un evento particolare: vi presentiamo il <b>primo torneo di Ping Pong 🏆🏓 in VR</b> a Trento!</p>
-                    <p>Il gioco in questione è <a href="https://www.oculus.com/experiences/quest/1995434190525828/">Eleven Table Tennis</a>, uno dei più gettonati nella Realtà Virtuale e conosciuto meglio come “il simulatore di Ping Pong in VR per eccellenza.”</p>
-                    <p>Gli sviluppatori di Eleven Table Tennis, <a href="https://www.forfunlabs.com/">For Fun Labs</a>, si sono pure offerti come nostri sponsor per questo evento!</p>
-                    <p>Si giocherà in un <b>torneo frenetico a 32 partecipanti single-elimination alla meglio di tre game</b> con tanto di livestream su <a href="https://twitch.tv/trentovrsociety">Twitch</a>.</p>                 
-                    <h4>Non serve alcun visore!</h4>
-                    Li forniremo noi assieme alle racchette, cortesemente stampate dal FabLab al fine di fornire un’esperienza ancora più autentica di Ping Pong.
+                    <h4 id="lang_hi">Ciao!</h4>
+                    <p id="lang_first_paragraph">Siamo la Trento Virtual Reality Society e quest’anno stiamo organizzando un evento particolare: vi presentiamo il <b>primo torneo di Ping Pong 🏆🏓 in VR</b> a Trento!</p>
+                    <p id="lang_second_paragraph">Il gioco in questione è <a href="https://www.oculus.com/experiences/quest/1995434190525828/">Eleven Table Tennis</a>, uno dei più gettonati nella Realtà Virtuale e conosciuto meglio come “il simulatore di Ping Pong in VR per eccellenza.”</p>
+                    <p id="lang_third_paragraph">Gli sviluppatori di Eleven Table Tennis, <a href="https://www.forfunlabs.com/">For Fun Labs</a>, si sono pure offerti come nostri sponsor per questo evento!</p>
+                    <p id="lang_fourth_paragraph">Si giocherà in un <b>torneo frenetico a 32 partecipanti single-elimination alla meglio di tre game</b> con tanto di livestream su <a href="https://twitch.tv/trentovrsociety">Twitch</a>.</p>                 
+                    <h4 id="lang_noheadsetneeded">Non serve alcun visore!</h4>
+                    <p id="lang_fifth_paragraph">Li forniremo noi assieme alle racchette, cortesemente stampate dal <a href="https://fablab.unitn.it/">FabLab</a> al fine di fornire un’esperienza ancora più autentica di Ping Pong.</p>
                     <br/>
                     <br/>
-                    <b>L’iscrizione al torneo è completamente gratuita.</b>
+                    <p id="lang_sixth_paragraph"><b>L’iscrizione al torneo è completamente gratuita.</b></p>
                     <br/>
                     <br/>
-                    <p><b>📅 Data:</b>
+                    <p id="lang_date_paragraph"><b>📅 Data:</b>
                     giovedì 23 febbraio 2023 dalle 15:00</p>
-                    <p><b>🗺 Location:</b>
+                    <p id="lang_location_paragraph"><b>🗺 Location:</b>
                     Aula A101 in Polo Ferrari - Povo 1 (Via Sommarive 9, 38123 TN)</p>
                 </div>
             </div>
         </section>
         <section class="section-calltoaction p-5">
             <center>
-                <h1>Interessatǝ?</h1>
-                <a href="https://forms.gle/2mcb9tRhipRRKn597" target = "_blank" class="btn btn-block btn-warning">Registrati al torneo</a>
+                <h1 id="lang_interested">Interessatǝ?</h1>
+                <a href="https://forms.gle/2mcb9tRhipRRKn597" target = "_blank" class="btn btn-block btn-warning" id="lang_calltoaction_button">Registrati al torneo</a>
             </center>
         </section>
         <section>
             <div class="container-fluid px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-12">
-                        <h5 class="text-center">Hai dubbi e vuoi ulteriori informazioni? Contattaci su tutti i nostri social e seguici per gli ultimi aggiornamenti sul torneo!</h5>
-                        <!--<div class="d-flex justify-content-center">
-                            <a href="https://linktr.ee/trentovrsociety"><button type="button" class="btn btn-warning btn-lg" id="lang_socialmedias">Tutti i nostri social</button></a>
-                        </div>-->
+                        <h5 class="text-center" id="lang_calltoaction_contact">Hai dubbi e vuoi ulteriori informazioni? Contattaci su tutti i nostri social e seguici per gli ultimi aggiornamenti sul torneo!</h5>
                         <div class="text-center my-3">
                             <a class="fa fa-facebook d-md-none" href="fb://profile/100085910752208"></a>
                             <a class="fa fa-instagram d-md-none" href="instagram://user?username=trentovrsociety"></a>
@@ -142,6 +141,11 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Language Switch -->
-        <script src="../js/languageSwitch.js"></script>
+        <script src="../js/tournament/languageSwitch.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                new FlipDown(1677160800, { theme: "light"}).start();
+            });
+        </script>
     </body>
 </html>
