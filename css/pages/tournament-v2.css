@@ -1,0 +1,153 @@
+header {
+    background: linear-gradient(77.78deg, #bc0597ce 0%, #99d5d6d1 100%);
+    height: 100vh;
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 60px;
+    color: white;
+}
+
+.text--title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 76px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.text--button {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.button-tp--white {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding: 13px 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 150px;
+    text-transform: uppercase;
+    transition: all .2s;
+}
+
+.button-tp--white:hover {
+    transform: translateY(-0.3rem);
+}
+
+.logo-comp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        ". logo1"
+        "logo2 .";
+    height: min-content;
+    background: 
+         linear-gradient(55deg,
+             rgba(255,255,255,0) 0%,
+             rgba(255, 255, 255, 0) calc(50% - 1px),
+             rgba(255, 255, 255, 1) 50%,
+             rgba(255, 255, 255, 0) calc(50% + 1px),
+             rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-comp>.logo1 {
+    grid-area: logo1;
+    max-width: 250px;
+}
+
+.logo-comp>.logo2 {
+    display: flex;
+    align-items: center;
+    grid-area: logo2;
+    max-width: 250px;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    filter: blur(2px);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        height: auto;
+    }
+    .back-arrow {
+        position: static;
+        display: block;
+        font-size: 40px;
+    }
+
+    .button-tp--white {
+        padding: 7px 26px;
+    }
+
+    .text--title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .text--button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .back-arrow {
+        font-size: 30px;
+    }
+
+    .text--title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .text--button {
+        font-size: 14px;
+    }
+}
