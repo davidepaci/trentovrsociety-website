@@ -18,13 +18,28 @@ header {
     font-size: 60px;
     line-height: 76px;
     text-transform: capitalize;
-    color: #FFFFFF;
+}
+
+.text--titlesmall {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 60px;
+    text-transform: capitalize;
 }
 
 .text--button {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
+}
+
+.text--small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 a {
@@ -98,9 +113,56 @@ a:visited {
     object-fit: cover;
 }
 
+.sponsor-bar {
+    position: relative;
+    background-color: #011E65;
+}
 
-@media only screen and (max-width: 992px) {
-    
+.sponsor-bar > div > img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 150px;
+    z-index: 2;
+    margin: 20px;
+}
+
+.sponsor-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+}
+
+.left-circles {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 500px;
+    z-index: -1;
+}
+
+.right-circles {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 500px;
+    z-index: -1;
+}
+
+.main-img {
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.wave-top, .wave-bottom {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -130,6 +192,23 @@ a:visited {
     .text--button {
         font-size: 16px;
     }
+
+    .sponsor-bar > div > img {
+        height: auto;
+        width: auto;
+        max-height: 75px;
+        max-width: 75px;
+        z-index: 2;
+        margin: 10px;
+    }
+
+    .logo-comp {
+        width: 60%;
+    }
+
+    .main-img {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -149,5 +228,43 @@ a:visited {
 
     .text--button {
         font-size: 14px;
+    }
+
+    .logo-comp {
+        width: 75%;
+    }
+
+    .wave-top {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: translateY(3px);
+        filter: invert(19%) sepia(83%) saturate(5534%) hue-rotate(302deg) brightness(78%) contrast(107%);
+    }
+    
+    .wave-bottom {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: rotate(180deg) translateY(3px);
+        filter: invert(12%) sepia(87%) saturate(1833%) hue-rotate(211deg) brightness(96%) contrast(115%);
+        
+    }
+    
+    .text--titlesmall {
+        font-size: 32px;
+        line-height: 46px;
+    }
+    
+    .text--small {
+        font-size: 16px;
+    }
+
+    .left-circles {
+        display: none;
+    }
+
+    .right-circles {
+        display: none;
     }
 }
