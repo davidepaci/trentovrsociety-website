@@ -157,12 +157,62 @@ main {
 .main-img {
     height: auto;
     width: auto;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 400px;
+    max-width: 400px;
 }
 
 .wave-top, .wave-bottom {
     display: none;
+}
+
+.section-left {
+    background-color: #011E65;
+}
+
+.section-right {
+    position: relative;
+    background-color: #BC0596;
+}
+
+.section-right > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .main-img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .section-right > img {
+        display: none;
+    }
+}
+
+.twitch-logo {
+    height: 150px;
+    width: auto;
+}
+
+footer {
+    background-color: #1D1D1D;
+}
+
+.footer-logo {
+    font-size: 24px;
+}
+
+.footer-text {
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
 }
 
 @media only screen and (max-width: 768px) {
@@ -209,6 +259,26 @@ main {
     .main-img {
         display: none;
     }
+
+    .left-circles, .right-circles {
+        display: none;
+    }
+
+    .wave-top {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: translateY(3px);
+        filter: invert(92%) sepia(77%) saturate(308%) hue-rotate(129deg) brightness(91%) contrast(83%);
+    }
+    
+    .wave-bottom {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: rotate(180deg) translateY(3px);
+        filter: invert(12%) sepia(87%) saturate(1833%) hue-rotate(211deg) brightness(96%) contrast(115%);
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -233,23 +303,6 @@ main {
     .logo-comp {
         width: 75%;
     }
-
-    .wave-top {
-        display: inline;
-        height: 25px;
-        width: 100%;
-        transform: translateY(3px);
-        filter: invert(19%) sepia(83%) saturate(5534%) hue-rotate(302deg) brightness(78%) contrast(107%);
-    }
-    
-    .wave-bottom {
-        display: inline;
-        height: 25px;
-        width: 100%;
-        transform: rotate(180deg) translateY(3px);
-        filter: invert(12%) sepia(87%) saturate(1833%) hue-rotate(211deg) brightness(96%) contrast(115%);
-        
-    }
     
     .text--titlesmall {
         font-size: 32px;
@@ -260,11 +313,8 @@ main {
         font-size: 16px;
     }
 
-    .left-circles {
-        display: none;
-    }
-
-    .right-circles {
-        display: none;
+    .twitch-logo {
+        height: 100px;
+        width: auto;
     }
 }
