@@ -112,5 +112,5 @@
 
 // Function that is invoked after the konami code has been entered
 function konamiIsDetected() {
-	alert("Quando sarai al torneo, dì a Davide “Restiamo umani! No al metaverso.” Se sei il primo a dirlo riceverai una medaglia!");
+	alert("Quando sarai al torneo, dì allo staff “Restiamo umani! No al metaverso.” Se sei il primo a dirlo riceverai un premio!");
 }
