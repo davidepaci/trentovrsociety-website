@@ -42,12 +42,12 @@ header {
     text-justify: inter-word;
 }
 
-a {
+a.register {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-a:visited {
+a.register:visited {
     color: #FFFFFF;
 }
 
