@@ -318,3 +318,17 @@ color: #FFFFFF;
         width: auto;
     }
 }
+
+/* Display to mobile */
+@media (max-width: 767px) {
+	.screenDisplay{
+		display:none
+	}
+}
+
+/* Display to Desktop and Tablet */
+@media only screen and (min-width: 768px) {
+  .mobileDisplay{
+		display:none
+	}
+ }
