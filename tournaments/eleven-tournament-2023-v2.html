@@ -43,6 +43,11 @@
     <link rel="stylesheet" href="../css/pages/tournament-v2.css" />
 
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+
+    <!-- Flipdown CSS-->
+    <link rel="stylesheet" href="../css/pages/tournament/flipdown.css">
+    <!-- Start Flipdown Countdown -->
+    <script src="../js/tournament/countdown.js"></script>
 </head>
 
 <body>
@@ -57,7 +62,8 @@
                         class="lni lni-arrow-left"></i></a></div>
             <div class="col-md-7">
                 <h1 class="text--title font-outfit text-white">Torneo di Ping Pong in VR a Trento</h1>
-                <h1 class="text--title font-outfit text-white mt-3">23 12 14 06</h1>
+                <!--<h1 class="text--title font-outfit text-white mt-3">23 12 14 06</h1>-->
+                <div id="flipdown" class="flipdown"></div>
                 <a href="https://forms.gle/2mcb9tRhipRRKn597" class="button-tp--white font-outfit
                     text--button mt-3 register">Registrati</a>
             </div>
@@ -185,6 +191,15 @@
             </div>
         </div>
     </footer>
+    <!-- Start Countdown -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new FlipDown(1677160800, {
+                theme: "light",
+                headings: ['Giorni', 'Ore', 'Minuti', 'Secondi']
+            }).start();
+        });
+    </script>
 </body>
 
 </html>
