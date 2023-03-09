@@ -1,47 +1,350 @@
-.header {
-    background-color: #2e1653;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a600fa' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.logo {
-    height: 15rem;
+header {
+    background: linear-gradient(77.78deg, #bc0597ce 0%, #99d5d6d1 100%);
+    height: 100vh;
+    position: relative;
 }
 
-h1, h2, h3, h5 {
-    color: white
-}
-
-h2 {
-    display: table;
-    margin: 0px auto 0px auto;
-    background-color:#0076fd;
-    padding:1rem;
-}
-
-.twitch {
-    background-color: #a970ff;
-    border-color: #a970ff;
+.back-arrow {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 60px;
     color: white;
 }
 
-.findoutmore {
-    background-color: black;
-    border-color: black;
-    color: white;
+.text--title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 76px;
+    text-transform: capitalize;
 }
 
-.btn {
-    border-radius: 0%;
+.text--titlesmall {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 60px;
+    text-transform: capitalize;
 }
 
-.section {
-    background-image: url('../../assets/img/tournament/banner.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 10rem;
+.text--button {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.section-info {
-    background-color: white;
+.text--small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+a.register {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a.register:visited {
+    color: #FFFFFF;
+}
+
+.button-tp--white {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding: 13px 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 150px;
+    text-transform: uppercase;
+    transition: all .2s;
+}
+
+.button-tp--white:hover {
+    transform: translateY(-0.3rem);
+}
+
+.logo-comp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        ". logo1"
+        "logo2 .";
+    height: min-content;
+    background:
+        linear-gradient(55deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) calc(50% - 1px),
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) calc(50% + 1px),
+            rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-comp>.logo1 {
+    grid-area: logo1;
+    max-width: 250px;
+}
+
+.logo-comp>.logo2 {
+    display: flex;
+    align-items: center;
+    grid-area: logo2;
+    max-width: 250px;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    filter: blur(2px);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sponsor-bar {
+    position: relative;
+    background-color: #011E65;
+}
+
+.sponsor-bar>div>img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 150px;
+    z-index: 2;
+    margin: 20px;
+}
+
+.sponsor-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+main {
+    position: relative;
+}
+
+.left-circles {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 500px;
+    z-index: -1;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.right-circles {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 500px;
+    z-index: -1;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.main-img {
+    height: auto;
+    width: auto;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.wave-top,
+.wave-bottom {
+    display: none;
+}
+
+.section-left {
+    background-color: #011E65;
+}
+
+.section-right {
+    position: relative;
+    background-color: #BC0596;
+}
+
+.section-right>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .main-img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .section-right>img {
+        display: none;
+    }
+}
+
+.twitch-logo {
+    height: 200px;
+    width: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+footer {
+    background-color: #1D1D1D;
+}
+
+.footer-logo {
+    font-size: 24px;
+}
+
+.footer-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        height: auto;
+    }
+
+    .back-arrow {
+        position: static;
+        display: block;
+        font-size: 40px;
+    }
+
+    .button-tp--white {
+        padding: 7px 26px;
+    }
+
+    .text--title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .text--button {
+        font-size: 16px;
+    }
+
+    .sponsor-bar>div>img {
+        height: auto;
+        width: auto;
+        max-height: 75px;
+        max-width: 75px;
+        z-index: 2;
+        margin: 10px;
+    }
+
+    .logo-comp {
+        width: 60%;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    .left-circles,
+    .right-circles {
+        display: none;
+    }
+
+    .wave-top {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: translateY(3px);
+        filter: invert(92%) sepia(77%) saturate(308%) hue-rotate(129deg) brightness(91%) contrast(83%);
+    }
+
+    .wave-bottom {
+        display: inline;
+        height: 25px;
+        width: 100%;
+        transform: rotate(180deg) translateY(3px);
+        filter: invert(12%) sepia(87%) saturate(1833%) hue-rotate(211deg) brightness(96%) contrast(115%);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .back-arrow {
+        font-size: 30px;
+    }
+
+    .text--title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .text--button {
+        font-size: 14px;
+    }
+
+    .logo-comp {
+        width: 75%;
+    }
+
+    .text--titlesmall {
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+    .text--small {
+        font-size: 16px;
+    }
+
+    .twitch-logo {
+        height: 150px;
+        width: auto;
+    }
+}
+
+/* Display to mobile */
+@media (max-width: 767px) {
+    .screenDisplay {
+        display: none
+    }
+}
+
+/* Display to Desktop and Tablet */
+@media only screen and (min-width: 768px) {
+    .mobileDisplay {
+        display: none
+    }
 }
